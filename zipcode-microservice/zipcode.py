@@ -5,10 +5,8 @@ app = Flask(__name__)
 
 @app.route("/zipcode", methods=["GET"])
 def get_zipcode():
-    # state = request.args.get("state")
-    # city = request.args.get("city")
-    state = 'ca'
-    city = 'fremont'
+    state = request.args.get("state")
+    city = request.args.get("city")
     if city:
         # make a request to a zip code API using the city name
         response = requests.get(f"http://api.zippopotam.us/us/{state}/{city}")
