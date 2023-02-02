@@ -7,7 +7,7 @@ Highlevel design of the microservices: service1(zipcode-microservice) and servic
 
 Each service is considered as seperate programs, and this can have seperate docker files. We are going to build the images and run the containers seperately.
 
-# Firstly, build the docker images for the zipcode-microservice and start the service inside a container:
+<ins> Firstly, build the docker images for the zipcode-microservice and start the service inside a container: </ins>
 
 <img width="497" alt="Screenshot 2023-02-02 at 11 46 54 AM" src="https://user-images.githubusercontent.com/102093437/216434464-760c7fd0-5270-4beb-bf0c-bf96f354d62f.png">
 
@@ -25,7 +25,7 @@ this creates and starts a new container:
 
 Now the service will be available with the API http://127.0.0.1:5001/zipcode 
 
-# Second, build the docker images for the weather-microservice and start the service inside a container:
+<ins> Second, build the docker images for the weather-microservice and start the service inside a container: </ins>
 
 <img width="581" alt="Screenshot 2023-02-02 at 11 58 42 AM" src="https://user-images.githubusercontent.com/102093437/216436694-40d787cf-feed-4686-9f32-19bfd234257d.png">
 
