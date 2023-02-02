@@ -7,7 +7,7 @@ Highlevel design of the microservices: service1(zipcode-microservice) and servic
 
 Each service is considered as seperate programs, and this can have seperate docker files. We are going to build the images and run the containers seperately.
 
-Firstly, build the docker images for the manifest in zipcode-microservice:
+# Firstly, build the docker images for the zipcode-microservice and start the service inside a container:
 
 <img width="497" alt="Screenshot 2023-02-02 at 11 46 54 AM" src="https://user-images.githubusercontent.com/102093437/216434464-760c7fd0-5270-4beb-bf0c-bf96f354d62f.png">
 
@@ -22,3 +22,23 @@ then, run the image and it's starts a conatiner:
 this creates and starts a new container:
 
 <img width="932" alt="Screenshot 2023-02-02 at 11 52 03 AM" src="https://user-images.githubusercontent.com/102093437/216435305-7abfa2e7-ec58-47ac-b51b-f999d6179ac6.png">
+
+Now the service will be available with the API http://127.0.0.1:5001/zipcode 
+
+# Second, build the docker images for the weather-microservice and start the service inside a container:
+
+<img width="581" alt="Screenshot 2023-02-02 at 11 58 42 AM" src="https://user-images.githubusercontent.com/102093437/216436694-40d787cf-feed-4686-9f32-19bfd234257d.png">
+
+this creates a docker image:
+
+<img width="931" alt="Screenshot 2023-02-02 at 11 59 36 AM" src="https://user-images.githubusercontent.com/102093437/216436882-19727e8d-a2bf-4d27-858d-e8d5b5856e4e.png">
+
+then, run the image and it's starts a conatiner:
+
+<img width="823" alt="Screenshot 2023-02-02 at 12 01 12 PM" src="https://user-images.githubusercontent.com/102093437/216437209-4138c6d3-884e-4f41-89ba-a8fb355a02fb.png">
+
+this creates and starts a new container:
+
+<img width="930" alt="Screenshot 2023-02-02 at 12 02 19 PM" src="https://user-images.githubusercontent.com/102093437/216437390-fef02aa9-233e-4d75-bd72-bc704ed5b350.png">
+
+Now the service will be available with the API http://127.0.0.1:5002/weather
