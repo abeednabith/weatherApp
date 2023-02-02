@@ -29,7 +29,7 @@ this creates and starts a new container:
 
 <img width="932" alt="Screenshot 2023-02-02 at 11 52 03 AM" src="https://user-images.githubusercontent.com/102093437/216435305-7abfa2e7-ec58-47ac-b51b-f999d6179ac6.png">
 
-Now the service will be available with the API http://127.0.0.1:5001/zipcode 
+Now the service will be available with the API http://127.0.0.1:5001/zipcode?state=ca&city=fremont
 
 <ins><strong> Second, build the docker images for the weather-microservice and start the service inside a container: </strong></ins>
 
@@ -47,4 +47,4 @@ this creates and starts a new container:
 
 <img width="930" alt="Screenshot 2023-02-02 at 12 02 19 PM" src="https://user-images.githubusercontent.com/102093437/216437390-fef02aa9-233e-4d75-bd72-bc704ed5b350.png">
 
-Now the service will be available with the API http://127.0.0.1:5002/weather
+Now the service will be available with the API http://127.0.0.1:5002/weather?zipcode=94539
