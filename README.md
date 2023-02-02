@@ -13,15 +13,16 @@ For weather: http://api.openweathermap.org/data/2.5/weather?q={zipcode},us&appid
 
 Each service is considered as seperate programs, and this can have seperate docker files. We are going to build the images and run the containers seperately.
 
-<ins><strong> Firstly, build the docker images for the zipcode-microservice and start the service inside a container: </strong></ins>
+<ins><strong> Build the docker images for the zipcode-microservice and start the service inside a container: </strong></ins>
 
+1) Build the docker image
 <img width="497" alt="Screenshot 2023-02-02 at 11 46 54 AM" src="https://user-images.githubusercontent.com/102093437/216434464-760c7fd0-5270-4beb-bf0c-bf96f354d62f.png">
 
 this creates a docker image:
 
 <img width="928" alt="Screenshot 2023-02-02 at 11 49 05 AM" src="https://user-images.githubusercontent.com/102093437/216434727-c0c50fb1-a9e8-44d8-bb75-ebacfdc59468.png">
 
-then, run the image and it's starts a conatiner:
+2) Run the image and it's starts a conatiner:
 
 <img width="725" alt="Screenshot 2023-02-02 at 11 50 43 AM" src="https://user-images.githubusercontent.com/102093437/216435073-21137d4f-3924-4b58-8e26-3d0a58d08cd9.png">
 
@@ -31,7 +32,9 @@ this creates and starts a new container:
 
 Now the service will be available with the API http://127.0.0.1:5001/zipcode?state=ca&city=fremont
 
-<ins><strong> Second, build the docker images for the weather-microservice and start the service inside a container: </strong></ins>
+<ins><strong> Build the docker images for the weather-microservice and start the service inside a container: </strong></ins>
+
+1) Build the docker image
 
 <img width="581" alt="Screenshot 2023-02-02 at 11 58 42 AM" src="https://user-images.githubusercontent.com/102093437/216436694-40d787cf-feed-4686-9f32-19bfd234257d.png">
 
@@ -39,7 +42,7 @@ this creates a docker image:
 
 <img width="931" alt="Screenshot 2023-02-02 at 11 59 36 AM" src="https://user-images.githubusercontent.com/102093437/216436882-19727e8d-a2bf-4d27-858d-e8d5b5856e4e.png">
 
-then, run the image and it's starts a conatiner:
+2) Run the image and it's starts a conatiner:
 
 <img width="823" alt="Screenshot 2023-02-02 at 12 01 12 PM" src="https://user-images.githubusercontent.com/102093437/216437209-4138c6d3-884e-4f41-89ba-a8fb355a02fb.png">
 
