@@ -13,7 +13,9 @@ def get_zipcode():
         if response.status_code == 200:
             data = response.json()
             zipcode = [place["post code"] for place in data["places"]]
-            return {"zipcode": zipcode}
+            # return {"zipcode": zipcode}
+            response = requests.get(f"http://127.0.0.1:5002/weather?zipcode={zipcode[0]}")
+            return {"zipcode": response.json()}
         else:
             return {"error": "City not found"}
     else:
