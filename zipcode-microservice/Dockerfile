@@ -7,6 +7,7 @@ WORKDIR /app
 # Install the required packages
 RUN pip install Flask
 RUN pip install requests
+RUN pip install json
 
 # Copy the application code to the container
 COPY zipcode.py .

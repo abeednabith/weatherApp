@@ -1,5 +1,6 @@
 from flask import Flask, request
 import requests
+import json
 
 app = Flask(__name__)
 
@@ -15,7 +16,7 @@ def get_zipcode():
             zipcode = [place["post code"] for place in data["places"]]
             # return {"zipcode": zipcode}
             response = requests.get(f"http://127.0.0.1:5002/weather?zipcode={zipcode[0]}")
-            return {"zipcode": response.json()}
+            return json.dumps(response.json())
         else:
             return {"error": "City not found"}
     else:
